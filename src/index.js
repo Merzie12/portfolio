@@ -66,15 +66,32 @@ socialsArray.map(social => {
 
 //Zmiana tła navbara przy scrollu
 
-window.addEventListener("scroll", event=>{
-    if(window.innerWidth >= 1024){
-        if(scrollY >= 100){
-            {menu.classList.contains("scrolled") ? null : menu.classList.add("scrolled")}
-        }
-        else{
-             menu.classList.remove("scrolled")
-        }
+// window.addEventListener("scroll", event=>{
+//     if(window.innerWidth >= 1024){
+//         if(scrollY >= 100){
+//             {menu.classList.contains("scrolled") ? null : menu.classList.add("scrolled")}
+//         }
+//         else{
+//              menu.classList.remove("scrolled")
+//         }
+//     }
+// })
+
+//Dodanie przycisku powrotu na górę
+
+let scrollUp = document.createElement("div");
+scrollUp.classList.add("scroll-up");
+scrollUp.innerHTML = "<i class='fas fa-arrow-up'></i>";
+scrollUp.addEventListener("click", ()=>{
+    document.body.scrollTop = document.documentElement.scrollTop = 0;
+})
+
+window.addEventListener("scroll", event => {
+    if (scrollY >= document.querySelector(".aboutme").getBoundingClientRect().top * 2){
+        document.body.appendChild(scrollUp);
     }
+    else scrollUp.remove();
+
 })
 
 
