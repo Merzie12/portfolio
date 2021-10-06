@@ -31,8 +31,16 @@ body {
   z-index: 2;
   font-size: 30px;
   transition: .2s;
-  color: white;
+  color: black;
   cursor: pointer;
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+  border-radius: .5rem;
+  display: flex;
+  justify-content: center;
+  align-self: center;
 }
 
 .menu-toggle.fa-times {
@@ -241,6 +249,11 @@ body {
   font-weight: 600;
   border-radius: .5rem;
   box-shadow: 0 5px 15px rgba(38, 47, 109, 0.4);
+  transition: .2s;
+}
+
+.aboutme-cv:hover {
+  background-color: #191f47;
 }
 
 .aboutme .skills {
@@ -290,6 +303,7 @@ body {
   color: black;
   text-align: center;
   padding-bottom: 30px;
+  overflow: hidden;
 }
 
 .projects-title {
@@ -334,7 +348,7 @@ body {
 .projects-container .project {
   text-align: center;
   border-radius: 2rem;
-  margin: 10px 0;
+  margin: 10px 20px;
   flex-basis: 45%;
   display: flex;
   flex-direction: column;
@@ -362,6 +376,7 @@ body {
   width: 100%;
   border-radius: .75rem .75rem 0 0;
   transition: .2s;
+  overflow: hidden;
 }
 
 @media (min-width: 1024px) {
@@ -394,108 +409,102 @@ body {
 }
 
 .contact {
+  height: 100%;
   width: 100%;
-  background-color: #12100E;
-  color: white;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   font-size: 1.5rem;
   font-weight: 600;
+  position: relative;
+  overflow: hidden;
+  flex-wrap: wrap;
 }
 
 .contact__title {
-  width: 100%;
-  height: 100px;
-  position: relative;
-  margin-bottom: 25px;
-  box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.5);
-  padding: 10px 0;
-  background: rgba(0, 0, 0, 0.5) url("./img/coding-gad0238010_640.jpg");
-  background-size: cover;
-  background-blend-mode: darken;
-  background-position: 25%;
+  margin-top: 50px;
 }
 
-.contact__title h1 {
+.contact::after {
+  content: 'KONTAKT';
   position: absolute;
+  color: black;
+  font-size: 15vw;
+  font-weight: 600;
+  width: 100vw;
+  opacity: .1;
+  z-index: -1;
+  text-align: center;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-@media (min-width: 1024px) {
-  .contact__title {
-    background: rgba(0, 0, 0, 0.5) url("./img/coding-g8936cd9fb_1920.jpg");
+@media (max-width: 1023px) {
+  .contact::after {
+    display: none;
   }
 }
 
 .contact__socials {
+  height: 100%;
   display: flex;
-  align-items: center;
   flex-direction: column;
-  justify-content: space-around;
   width: 100%;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.contact .social {
-  background-color: white;
-  color: #91171F;
-  width: 125px;
-  height: 125px;
-  margin: 10px;
-  border-radius: 50%;
-  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.315);
-  transition: .2s linear;
-  cursor: pointer;
-  position: relative;
-  transition: .3s;
+@media (min-width: 1024px) {
+  .contact__socials {
+    flex-direction: row;
+  }
 }
 
-.contact .social__icon {
-  font-size: 40px;
-  margin: 30px 0;
-  transition: .3s;
-  position: absolute;
-  top: 25%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.contact__socials .social {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  transition: .2s;
+  color: #26306d;
+  border-radius: 1rem;
 }
 
-.contact .social p {
-  display: none;
-  position: absolute;
-  top: 80%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: .3s;
+.contact__socials .social__icon {
+  font-size: 60px;
+  margin: 20px;
 }
 
-.contact .social.active {
-  width: 250px;
-  border-radius: 2rem;
-}
-
-.contact .social.active p {
-  font-size: 15px;
-  margin-bottom: 20px;
-  display: block;
-}
-
-.contact .social.disabled {
-  cursor: default;
+.contact__socials .social.disabled {
   color: gray;
+}
+
+@media (max-width: 1023px) {
+  .contact__socials .social {
+    margin: 30px;
+  }
+}
+
+.contact__socials .social:hover.active {
+  cursor: pointer;
+  transform: translateY(-5%);
+  box-shadow: 0 10px 10px rgba(38, 47, 109, 0.52);
+  background-color: #26306d;
+  color: white;
 }
 
 .scroll-up {
   position: fixed;
   right: 30px;
   bottom: 15px;
-  color: black;
+  color: white;
+  background-color: #26306d;
   font-size: 40px;
   cursor: pointer;
-  border: 3px solid black;
   width: 50px;
   height: 50px;
   display: flex;
@@ -506,8 +515,8 @@ body {
 }
 
 .scroll-up:hover {
-  background-color: black;
-  color: white;
+  background-color: #1f285a;
+  box-shadow: 0 0 5px 3px rgba(38, 47, 109, 0.5);
 }
 
 @keyframes arrowmove {

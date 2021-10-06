@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"/>
-    <link rel="stylesheet" href="./src/style.css">
+    <link rel="stylesheet" href="./src/style.min.css">
     
 </head>
 <body>
@@ -39,10 +39,10 @@
         <section class="aboutme">
             <h1 class="aboutme-title">O MNIE</h1>
             <p class="aboutme-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. In, eos neque? Nisi optio facere harum placeat est qui distinctio velit quaerat, quae cupiditate modi cum suscipit eligendi quia aut veniam nesciunt maiores nulla aspernatur voluptas, at cumque. Sint, veritatis illum maiores blanditiis quae alias accusamus at expedita aspernatur quod quasi.</p>
-            <a href="#" class="aboutme-cv">Moje CV</a>
+            <a href="#" class="aboutme-cv" data-aos="zoom-in-down">Moje CV</a>
             <h2 class="aboutme-skills">Poznane technologie</h2>
             <div class="skills">
-                <span class="skills-element">
+                <span class="skills-element" data-aos="zoom-in-down" >
                     <i class="fab fa-html5 skill-icon"></i> 
                     <br> HTML <br> 
                     <span class="skill-indicator active"></span>
@@ -51,7 +51,7 @@
                     <span class="skill-indicator active"></span>
                 </span>
                 
-                <span class="skills-element">
+                <span class="skills-element" data-aos="zoom-in-up">
                     <i class="fab fa-js-square skill-icon"></i>
                      <br> JS<br> 
                      <span class="skill-indicator active"></span>
@@ -59,7 +59,7 @@
                      <span class="skill-indicator active"></span>
                      <span class="skill-indicator inactive"></span>
                 </span>
-                <span class="skills-element">
+                <span class="skills-element" data-aos="zoom-in-down">
                     <i class="fab fa-css3-alt skill-icon"></i> 
                     <br> CSS <br> 
                     <span class="skill-indicator active"></span>
@@ -67,7 +67,7 @@
                     <span class="skill-indicator active"></span>
                     <span class="skill-indicator active"></span>
                 </span>
-                <span class="skills-element">
+                <span class="skills-element" data-aos="zoom-in-up">
                     <i class="fab fa-react skill-icon"></i>
                     <br> React <br> 
                     <span class="skill-indicator active"></span>
@@ -75,7 +75,7 @@
                     <span class="skill-indicator inactive"></span>
                     <span class="skill-indicator inactive"></span>
                 </span>
-                <span class="skills-element">
+                <span class="skills-element" data-aos="zoom-in-down">
                     <i class="fab fa-github skill-icon"></i> 
                     <br> Git <br> 
                     <span class="skill-indicator active"></span>
@@ -89,9 +89,9 @@
             <div class="projects-title">
               <h1>PROJEKTY</h1>  
             </div>
-            <p>Aby przejść do projektu kliknij na obrazek.</p>
+            <p class="projects-subtext">Aby przejść do projektu kliknij na obrazek.</p>
             <div class="projects-container">
-                <div class="project">
+                <div class="project" data-aos="fade-right">
                     <a href="#"><img src="https://picsum.photos/200/100" alt="test" class="project-image"></a> 
                     <div class="project-info">
                         <h3 class="project-title">Nazwa</h3>
@@ -100,7 +100,7 @@
                     <p class="project-tech"><i class="fab fa-html5 project-icon"></i> <i class="fab fa-js-square project-icon"></i> <i class="fab fa-react project-icon"></i> </p>
                     </div>
                 </div>
-                <div class="project">
+                <div class="project" data-aos="fade-left">
                     <a href="#"><img src="https://picsum.photos/200/100" alt="test" class="project-image"></a> 
                     <div class="project-info">
                         <h3 class="project-title">Nazwa</h3>
@@ -109,7 +109,7 @@
                     <p class="project-tech"><i class="fab fa-html5 project-icon"></i> <i class="fab fa-js-square project-icon"></i> <i class="fab fa-react project-icon"></i> </p>
                     </div>
                 </div>
-                <div class="project">
+                <div class="project" data-aos="fade-right">
                     <a href="#"><img src="https://picsum.photos/1920/1080" alt="test" class="project-image"></a> 
                     <div class="project-info">
                         <h3 class="project-title">Nazwa</h3>
@@ -118,7 +118,7 @@
                     <p class="project-tech"><i class="fab fa-html5 project-icon"></i> <i class="fab fa-js-square project-icon"></i> <i class="fab fa-react project-icon"></i> </p>
                     </div>
                 </div>
-                <div class="project">
+                <div class="project" data-aos="fade-left">
                     <a href="#"><img src="https://picsum.photos/200/100" alt="test" class="project-image"></a> 
                     <div class="project-info">
                         <h3 class="project-title">Nazwa</h3>
@@ -127,7 +127,7 @@
                     <p class="project-tech"><i class="fab fa-html5 project-icon"></i> <i class="fab fa-js-square project-icon"></i> <i class="fab fa-react project-icon"></i> </p>
                     </div>
                 </div>
-                <div class="project">
+                <div class="project" data-aos="fade-right">
                     <a href="#"><img src="https://picsum.photos/200/100" alt="test" class="project-image"></a> 
                     <div class="project-info">
                         <h3 class="project-title">Nazwa</h3>
@@ -140,17 +140,17 @@
         </section>
 
         <section class="contact">
-            <div class="contact__title"><h1>KONTAKT</h1></div>
+            <!-- <div class="contact__title"><h1>KONTAKT</h1></div> -->
             <div class="contact__socials">
-                <div class="social" data-aos="fade-up-right">
+                <div class="social mail-btn active">
                     <i class="fas fa-envelope social__icon"></i>
-                    <p>m3fezpl@gmail.com</p>
+                    <p class="mail-text">m3fezpl@gmail.com</p>
                 </div>
-                <div class="social">
+                <div class="social active">
                     <i class="fab fa-facebook social__icon"></i>
                     <p>Jakub Słowik</p>
                 </div>
-                <div class="social">
+                <div class="social active">
                     <i class="fab fa-instagram social__icon"></i>
                     <p>@theyhatemerzie</p>
                 </div>
@@ -158,14 +158,18 @@
                     <i class="fab fa-discord social__icon"></i>
                     <p>Wkrótce</p>
                 </div>
+                <div class="social active">
+                    <i class="fab fa-github social__icon"></i>
+                    <p>Merzie12</p>
+                </div>
             </div>
         </section>
     </div>
 
-    <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./src/index.js"></script>
-    <!-- <script>
+    <script>
         AOS.init();
-    </script> -->
+    </script>
 </body>
 </html>

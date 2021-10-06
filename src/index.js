@@ -53,16 +53,6 @@ sectionsArray.map(section => {
     })
 })
 
-//Sekcja kontaktu
-
-let socials = document.querySelectorAll(".social");
-let socialsArray = Array.from(socials);
-socialsArray.map(social => {
-    social.addEventListener("click", ()=>{
-        social.classList.toggle("active");
-    })
-})
-
 
 //Zmiana tła navbara przy scrollu
 
@@ -94,5 +84,8 @@ window.addEventListener("scroll", event => {
 
 })
 
+let mailBtn = document.querySelector(".mail-btn");
+let mailText = document.querySelector(".mail-text").textContent;
 
+mailBtn.addEventListener("click", console.log(navigator.clipboard.writeText("XD")));
 
