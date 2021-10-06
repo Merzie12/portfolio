@@ -349,20 +349,11 @@ body{
 }
 
 .contact{
-    height: 100vh;
-    width: 100%;
     // background-color: #12100E;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     font-size: 1.5rem;
     font-weight: 600;
     position: relative;
-    flex-wrap: wrap;
-    &__title{
-        margin-top: 50px;
-    }
     &::after{
         content: 'KONTAKT';
         position: absolute;
@@ -381,7 +372,6 @@ body{
         }
     }
     &__socials{
-        height: 100vh;
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -389,6 +379,7 @@ body{
         align-items: center;
         @media(min-width: 1024px){
             flex-direction: row;
+            height: 100vh;
         }
         .social{
             &__icon{
