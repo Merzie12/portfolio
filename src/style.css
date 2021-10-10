@@ -476,7 +476,6 @@ body {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  transition: .2s;
   color: #26306d;
   border-radius: 1rem;
 }
@@ -499,6 +498,7 @@ body {
 }
 
 .contact__socials .social:hover.active {
+  transition: .2s;
   cursor: pointer;
   transform: translateY(-5%);
   box-shadow: 0 10px 10px rgba(38, 47, 109, 0.52);
