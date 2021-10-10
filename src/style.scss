@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+$primary: #26306d;
+
+
 *{
     margin: 0;
     padding: 0;
@@ -30,16 +34,11 @@ body{
     z-index: 2;
     font-size: 30px;
     transition: .2s;
-    color: black;
+    color: white;
     cursor: pointer;
-    background-color: white;
-    width: 40px;
-    height: 40px;
-    padding: 5px;
-    border-radius: .5rem;
-    display: flex;
-    justify-content: center;
-    align-self: center;
+    &.scrolled{
+        color: black;
+    }
     &.fa-times{
         left: 80%;
         @media (min-width: 1024px){
@@ -59,6 +58,7 @@ body{
     width: 75%;
     height: 100%;
     background-color: #111;
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -77,6 +77,7 @@ body{
     &.active{
         left: 0;
         box-shadow: 0 1px 5px 2px black;
+        color: white;
     }
     &__content{
         height: 100%;
@@ -85,7 +86,7 @@ body{
             height: 100%;
             width: 100%;
             list-style-type: none;
-            color: white;
+            // color: white;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -105,6 +106,11 @@ body{
                   @media (min-width: 1024px){
                     font-size: 20px;
                   }
+                  opacity: 0.7;
+                  &:hover{
+                      opacity: 1;
+                  }
+                  
                   &.disabled{
                       cursor: default;
                       color: gray;
@@ -134,7 +140,9 @@ body{
     background-position: 20%;
     background-blend-mode: darken;
     background-size: cover;
+    // background-color: $primary;
     color: white;
+    font-weight: 600;
     &__text-content{
         position: absolute;
         top: 40%;
@@ -142,7 +150,18 @@ body{
         transform: translate(-50%, -50%);
         text-align: center;
         h1{
+            font-size: 80px;
+        }
+        h2{
             font-size: 40px;
+        }
+        @media (max-width: 1023px){
+            h1{
+                font-size: 40px;
+            }
+            h2{
+                font-size: 20px;
+            }
         }
     }
     .arrow-icon{
@@ -205,7 +224,7 @@ body{
         display: block;
         margin: 25px 0;
         padding: 10px 30px;
-        background-color: #26306d;
+        background-color: $primary;
         text-decoration: none;
         color: white;
         font-weight: 600;
@@ -213,7 +232,7 @@ body{
         box-shadow: 0 5px 15px rgba(38, 47, 109, 0.4);
         transition: .2s;
         &:hover{
-            background-color: darken(#26306d, 10%);
+            background-color: darken($primary, 10%);
         }
     }
     .skills{
@@ -223,9 +242,9 @@ body{
         width: 100vw;
         &-element{
             margin: 20px;
-            color: #26306d;
+            color: $primary;
             text-align: center;
-            border: 2px solid #26306d;
+            border: 2px solid $primary;
             padding: 10px;
             border-radius: .75rem;
             box-shadow: 0 10px 10px rgba(38, 47, 109, 0.52);
@@ -242,10 +261,10 @@ body{
                 margin: 5px;
                 border-radius: 50%;
                 &.active{
-                    background-color: #26306d;
+                    background-color: $primary;
                 }
                 &.inactive{
-                    border: 2px solid #26306d;
+                    border: 2px solid $primary;
                 }
             }
         }
@@ -301,31 +320,31 @@ body{
             justify-content: space-between;
             overflow: hidden;
             box-shadow: 0 0 5px 2px rgba(0,0,0,.25);
-            border: 2px solid #26306d;
+            border: 2px solid $primary;
             border-radius: .75rem;
             box-shadow: 0 10px 10px rgba(38, 47, 109, 0.52);
             @media (min-width: 1024px){
                 flex-direction: row;
                 justify-content: space-between;
                 width: 50%;
-                height: 300px;
+                min-height: 300px;
                 a{
                     width: 40%;
                 }
             }
             &-image{
                 width: 100%;
-                border-radius: .75rem .75rem 0 0;
                 transition: .2s;
                 overflow: hidden;
                 @media (min-width: 1024px){
                     flex: 1;
                     height: 100%;
-                    border-radius: .75rem 0 0 .75rem;
                 }
                 &:hover{
-                    transform: scale(1.1);
+                    zoom: 2;
                     cursor: pointer;
+                    transform: scale(1.1);
+                    position: relative;
                 }
             }
             &-info{
@@ -335,13 +354,13 @@ body{
                 align-content: center;
                 padding: 7.5px;
                 flex: 1;
-                color: #26306d;
+                color: $primary;
             }
             &-tech{
                 .project-icon{
                     font-size: 40px;
                     margin: 10px 15px 15px 15px;
-                    color: #26306d;
+                    color: $primary;
                 }
             }
         }
@@ -373,9 +392,11 @@ body{
     }
     &__socials{
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         width: 100%;
+        height: 100vh;
         justify-content: space-around;
+        flex-wrap: wrap;
         align-items: center;
         @media(min-width: 1024px){
             flex-direction: row;
@@ -391,6 +412,11 @@ body{
             }
             width: 300px;
             height: 300px;
+            @media (max-width: 1023px){
+                width: calc(40%);
+                height: 150px;
+                font-size: .75rem;
+            }
             display: flex;
             justify-content: center;
             flex-direction: column;
@@ -398,16 +424,13 @@ body{
             transition: .2s;
             // box-shadow: 0 10px 10px rgba(38, 47, 109, 0.52);
             // border: 2px solid #26306d;
-            color: #26306d;
+            color: $primary;
             border-radius: 1rem;
-            @media(max-width: 1023px){
-                margin: 30px;
-            }
             &:hover.active{
                 cursor: pointer;
                 transform: translateY(-5%);
                 box-shadow: 0 10px 10px rgba(38, 47, 109, 0.52);
-                background-color: #26306d;
+                background-color: $primary;
                 color: white;
             }
             
@@ -421,7 +444,7 @@ body{
     right: 30px;
     bottom: 15px;
     color: white;
-    background-color: #26306d;
+    background-color: $primary;
     font-size: 40px;
     cursor: pointer;
     width: 50px;
@@ -432,8 +455,19 @@ body{
     border-radius: 50%;
     transition: .2s;
     &:hover{
-        background-color: darken(#26306d, 5%);
+        background-color: darken($primary, 5%);
         box-shadow: 0 0 5px 3px rgba(38, 47, 109, 0.5);
+    }
+}
+
+footer{
+    background-color: rgba(34, 34, 34, 1);
+    color: white;
+    p{
+        padding: 10px;
+    }
+    a{
+        color: royalblue;
     }
 }
 

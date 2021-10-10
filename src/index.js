@@ -71,7 +71,7 @@ sectionsArray.map(section => {
 
 let scrollUp = document.createElement("div");
 scrollUp.classList.add("scroll-up");
-scrollUp.innerHTML = "<i class='fas fa-arrow-up'></i>";
+scrollUp.innerHTML = "<i class='fas fa-chevron-up'></i>";
 scrollUp.addEventListener("click", ()=>{
     document.body.scrollTop = document.documentElement.scrollTop = 0;
 })
@@ -79,13 +79,13 @@ scrollUp.addEventListener("click", ()=>{
 window.addEventListener("scroll", event => {
     if (scrollY >= document.querySelector(".aboutme").getBoundingClientRect().top * 2){
         document.body.appendChild(scrollUp);
+        menuToggle.classList.add("scrolled");
     }
-    else scrollUp.remove();
+    else {
+        scrollUp.remove();
+        menuToggle.classList.remove("scrolled");
+    }
 
 })
 
-let mailBtn = document.querySelector(".mail-btn");
-let mailText = document.querySelector(".mail-text").textContent;
-
-mailBtn.addEventListener("click", console.log(navigator.clipboard.writeText("XD")));
 
