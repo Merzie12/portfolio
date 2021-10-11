@@ -5,14 +5,15 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   scroll-behavior: smooth;
 }
 
 body {
   min-height: 100vh;
   max-width: 100vw;
-  font-family: 'poppins';
+  font-family: "poppins";
 }
 
 .wrapper {
@@ -30,7 +31,7 @@ body {
   left: 15px;
   z-index: 2;
   font-size: 30px;
-  transition: .2s;
+  transition: 0.2s;
   color: white;
   cursor: pointer;
 }
@@ -67,7 +68,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: .2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 @media (min-width: 1024px) {
@@ -140,14 +141,14 @@ body {
 }
 
 .navbar__content ul li::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: -100%;
   width: 100%;
   height: 3px;
   background-color: white;
-  transition: .2s;
+  transition: 0.2s;
 }
 
 .navbar__content ul li:hover::after {
@@ -224,13 +225,13 @@ body {
 }
 
 .aboutme::after {
-  content: 'O MNIE';
+  content: "O MNIE";
   position: absolute;
   color: black;
   font-size: 15vw;
   font-weight: 600;
   min-width: 100vw;
-  opacity: .1;
+  opacity: 0.1;
   z-index: -1;
   text-align: center;
   top: 50%;
@@ -263,9 +264,9 @@ body {
   text-decoration: none;
   color: white;
   font-weight: 600;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   box-shadow: 0 5px 15px rgba(38, 47, 109, 0.4);
-  transition: .2s;
+  transition: 0.2s;
 }
 
 .aboutme-cv:hover {
@@ -285,7 +286,7 @@ body {
   text-align: center;
   border: 2px solid #26306d;
   padding: 10px;
-  border-radius: .75rem;
+  border-radius: 0.75rem;
   box-shadow: 0 10px 10px rgba(38, 47, 109, 0.52);
 }
 
@@ -372,7 +373,7 @@ body {
   overflow: hidden;
   box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.25);
   border: 2px solid #26306d;
-  border-radius: .75rem;
+  border-radius: 0.75rem;
   box-shadow: 0 10px 10px rgba(38, 47, 109, 0.52);
 }
 
@@ -390,7 +391,7 @@ body {
 
 .projects-container .project-image {
   width: 100%;
-  transition: .2s;
+  transition: 0.2s;
   overflow: hidden;
 }
 
@@ -432,13 +433,13 @@ body {
 }
 
 .contact::after {
-  content: 'KONTAKT';
+  content: "KONTAKT";
   position: absolute;
   color: black;
   font-size: 15vw;
   font-weight: 600;
   width: auto;
-  opacity: .1;
+  opacity: 0.1;
   z-index: -1;
   text-align: center;
   top: 50%;
@@ -493,12 +494,12 @@ body {
   .contact__socials .social {
     width: calc(40%);
     height: 150px;
-    font-size: .75rem;
+    font-size: 0.75rem;
   }
 }
 
 .contact__socials .social:hover.active {
-  transition: .2s;
+  transition: 0.2s;
   cursor: pointer;
   transform: translateY(-5%);
   box-shadow: 0 10px 10px rgba(38, 47, 109, 0.52);
@@ -520,7 +521,7 @@ body {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  transition: .2s;
+  transition: 0.2s;
 }
 
 .scroll-up:hover {
