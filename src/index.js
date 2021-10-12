@@ -53,20 +53,6 @@ sectionsArray.map(section => {
     })
 })
 
-
-//Zmiana tła navbara przy scrollu
-
-// window.addEventListener("scroll", event=>{
-//     if(window.innerWidth >= 1024){
-//         if(scrollY >= 100){
-//             {menu.classList.contains("scrolled") ? null : menu.classList.add("scrolled")}
-//         }
-//         else{
-//              menu.classList.remove("scrolled")
-//         }
-//     }
-// })
-
 //Dodanie przycisku powrotu na górę
 
 let scrollUp = document.createElement("div");
@@ -86,6 +72,21 @@ window.addEventListener("scroll", event => {
         menuToggle.classList.remove("scrolled");
     }
 
+})
+
+window.addEventListener("DOMContentLoaded", event =>{
+    document.querySelector(".close").addEventListener("click", ()=>{
+        document.querySelector(".message").classList.add("remove");
+        setTimeout(()=>{
+            document.querySelector(".message").remove();
+        }, 1000)
+    })
+    setTimeout(()=>{
+        document.querySelector(".message").classList.add("remove");
+        setTimeout(()=>{
+            document.querySelector(".message").remove();
+        }, 1000)
+    }, 7000);
 })
 
 
