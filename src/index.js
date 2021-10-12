@@ -81,12 +81,15 @@ window.addEventListener("DOMContentLoaded", event =>{
             document.querySelector(".message").remove();
         }, 1000)
     })
-    setTimeout(()=>{
-        document.querySelector(".message").classList.add("remove");
+
         setTimeout(()=>{
-            document.querySelector(".message").remove();
-        }, 1000)
-    }, 7000);
+            if(document.querySelector(".message")){
+                document.querySelector(".message").classList.add("remove");
+                setTimeout(()=>{
+                    document.querySelector(".message").remove();
+                }, 1000)
+            }
+        }, 7000);
 })
 
 
