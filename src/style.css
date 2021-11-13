@@ -26,65 +26,6 @@ body {
   min-height: 100%;
 }
 
-.message {
-  width: 300px;
-  height: 150px;
-  position: fixed;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-  margin: 60px;
-  background-color: white;
-  box-shadow: 0 5px 15px 5px rgba(0, 0, 0, 0.25);
-  z-index: 5;
-  overflow: hidden;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 5px;
-  transition: 0.3s linear;
-}
-
-.message .close {
-  position: absolute;
-  top: 0;
-  right: 0;
-  font-size: 30px;
-  padding: 10px;
-  color: #26306d;
-  cursor: pointer;
-  opacity: 0.75;
-}
-
-.message .close:hover {
-  opacity: 1;
-}
-
-@media (max-width: 1023px) {
-  .message {
-    display: none;
-  }
-}
-
-.message h2 {
-  font-size: 20px;
-}
-
-.message.remove {
-  right: -360px;
-}
-
-.message .loading {
-  height: 5px;
-  width: 100%;
-  background-color: #26306d;
-  position: absolute;
-  bottom: 0;
-  left: -100%;
-  animation: loading 7s both linear;
-}
-
 .menu-toggle {
   position: fixed;
   top: 15px;
@@ -512,7 +453,6 @@ body {
   display: flex;
   flex-direction: row;
   width: 100%;
-  height: 100vh;
   justify-content: space-around;
   flex-wrap: wrap;
   align-items: center;
@@ -526,8 +466,8 @@ body {
 }
 
 .contact__socials .social {
-  width: 300px;
-  height: 300px;
+  min-width: 33%;
+  height: 200px;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -546,7 +486,7 @@ body {
 
 @media (max-width: 1023px) {
   .contact__socials .social {
-    width: calc(40%);
+    width: 100%;
     height: 150px;
     font-size: 0.75rem;
   }
@@ -557,8 +497,7 @@ body {
   cursor: pointer;
   transform: translateY(-5%);
   box-shadow: 0 10px 10px rgba(38, 47, 109, 0.52);
-  background-color: #26306d;
-  color: white;
+  border-bottom: 3px solid #26306d;
 }
 
 .scroll-up {
