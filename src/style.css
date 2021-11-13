@@ -43,7 +43,7 @@ body {
   align-items: center;
   justify-content: center;
   padding: 5px;
-  transition: .3s linear;
+  transition: 0.3s linear;
 }
 
 .message .close {
@@ -54,7 +54,7 @@ body {
   padding: 10px;
   color: #26306d;
   cursor: pointer;
-  opacity: .75;
+  opacity: 0.75;
 }
 
 .message .close:hover {
@@ -351,7 +351,7 @@ body {
   text-align: center;
   border: 2px solid #26306d;
   padding: 10px;
-  border-radius: .75rem;
+  border-radius: 0.75rem;
   box-shadow: 0 10px 10px rgba(38, 47, 109, 0.52);
 }
 
@@ -428,13 +428,10 @@ body {
 }
 
 .projects-container .project {
-  text-align: center;
   margin: 10px 20px;
   flex-basis: 45%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  overflow: hidden;
   box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.25);
   border: 2px solid #26306d;
   box-shadow: 0 10px 10px rgba(38, 47, 109, 0.52);
@@ -444,11 +441,10 @@ body {
   .projects-container .project {
     flex-direction: row;
     justify-content: space-between;
-    width: 50%;
     min-height: 300px;
   }
   .projects-container .project a {
-    width: 40%;
+    flex-basis: 50%;
   }
 }
 
@@ -460,16 +456,12 @@ body {
 
 @media (min-width: 1024px) {
   .projects-container .project-image {
-    flex: 1;
     height: 100%;
   }
 }
 
 .projects-container .project-image:hover {
-  zoom: 2;
   cursor: pointer;
-  transform: scale(1.1);
-  position: relative;
 }
 
 .projects-container .project-info {
