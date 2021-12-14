@@ -335,6 +335,9 @@ body {
   text-align: center;
   padding-bottom: 30px;
   overflow: hidden;
+  &-soon {
+    margin: 100px;
+  }
   &-title {
     width: 100%;
     height: 100px;
